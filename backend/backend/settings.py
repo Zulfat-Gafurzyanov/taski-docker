@@ -10,10 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'default-secret-key')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '89.169.160.78', 'yandexproba.ddns.net']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'HOST_IP', 'DOMAIN']
 
 # Application definition
 
